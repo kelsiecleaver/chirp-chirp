@@ -13,13 +13,22 @@ var counter = {
   "q" : 0,  "r" : 0,  "s" : 0,  "t" : 0,
   "u" : 0,  "v" : 0,  "w" : 0,  "x" : 0,
   "y" : 0,  "z" : 0
-}
+};
 
 function countLetters(counter, sample_text){
   // FIX ME
+  if(sample_text.length === 0){
+    return counter;
+  }
+counter[sample_text[0]] += 1;
+  return countLetters(counter, sample_text.slice(1, sample_text.length));
+  var text = sample_text.toLowerCase();
+
 }
 
 $(document).ready(function(){
   countLetters(counter, sample_text);
   $("#result").html(JSON.stringify(counter));
 });
+
+
