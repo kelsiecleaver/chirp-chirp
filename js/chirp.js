@@ -3,7 +3,7 @@ function chirp(num){
   if(num === 1){
     return "chirp";
   }
-  console.log(num);
+
   return "chirp " + chirp(--num);
 }
 

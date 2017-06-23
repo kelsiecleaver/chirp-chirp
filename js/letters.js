@@ -20,9 +20,8 @@ function countLetters(counter, sample_text){
   if(sample_text.length === 0){
     return counter;
   }
-counter[sample_text[0]] += 1;
+  counter[sample_text[0]] += 1;
   var text = sample_text.toLowerCase();
-
   return countLetters(counter, sample_text.slice(1, sample_text.length));
 
 }
